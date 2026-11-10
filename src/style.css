@@ -1,0 +1,112 @@
+:root {
+  accent-color: #e84c3d;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-top: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  width: 100dvw;
+}
+
+.container-wrapper {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+input {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+}
+
+.gauge {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e7e7e7;
+  border-radius: 50vw 50vw 0 0;
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.09),
+    0 0 35px 5px rgba(255, 255, 255, 0.29);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.gauge-center {
+  align-content: flex-end;
+  align-items: flex-end;
+  background: #fff;
+  border-radius: 30vw 30vw 0 0;
+  bottom: 0;
+  box-shadow: 0 -13px 15px -10px rgba(0, 0, 0, 0.28);
+  box-sizing: border-box;
+  color: #000;
+  content: "";
+  display: flex;
+  flex-wrap: wrap;
+  height: 60%;
+  justify-content: center;
+  padding: 0.5em;
+  position: absolute;
+  right: 20vw;
+  width: 60vw;
+
+  &::before {
+    content: "Bullshitomètre";
+    display: block;
+    font-size: 5vw;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+}
+
+.needle {
+  animation: speed 1.5s 0.5s cubic-bezier(0.25, 0.25, 0.37, 1.205) forwards;
+  background: #f00;
+  border-radius: 100% 5px 5px 100%;
+  bottom: 4px;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.3);
+  height: 7px;
+  left: 5vw;
+  position: absolute;
+  transform-origin: 100% 4px;
+  width: 45vw;
+}
+
+.st {
+  background: #e84c3d;
+  height: 50vw;
+  left: 50%;
+  opacity: 0.25;
+  position: absolute;
+  top: 0;
+  transform-origin: 0 100%;
+  transform: rotate(65deg);
+  width: 50vw;
+
+  &:first-child {
+    background: #f1c40f;
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes speed {
+  to {
+    transform: rotate(var(--rotation));
+  }
+}

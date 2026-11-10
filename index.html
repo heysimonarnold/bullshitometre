@@ -1,0 +1,61 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Primary metadata -->
+    <title>Bullshitomètre</title>
+    <meta
+      name="description"
+      content="Le Bullshitomètre est un outil de mesure du bullshit ambiant dans les conversations. Plus le niveau de bullshit est élevé, plus sa valeur l'est aussi!"
+    />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://heysimonarnold.github.io/bullshitometre/"
+    />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bullshitomètre" />
+    <meta property="og:title" content="Bullshitomètre" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta
+      property="og:description"
+      content="Le Bullshitomètre est un outil de mesure du bullshit ambiant dans les conversations. Plus le niveau de bullshit est élevé, plus sa valeur l'est aussi!"
+    />
+    <meta
+      property="og:url"
+      content="https://heysimonarnold.github.io/bullshitometre/"
+    />
+    <meta
+      property="og:image"
+      content="https://heysimonarnold.github.io/bullshitometre/og-image.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Le Bullshitomètre est un outil de mesure du bullshit ambiant dans les conversations. Plus le niveau de bullshit est élevé, plus sa valeur l'est aussi!"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-wrapper">
+        <div class="gauge">
+          <div class="st"></div>
+          <div class="st"></div>
+          <div class="needle"></div>
+          <div class="gauge-center"></div>
+          <input type="range" min="0" max="100" value="0" />
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
