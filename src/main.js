@@ -28,9 +28,15 @@ class App {
   getRouteValue() {
     const base = import.meta.env.BASE_URL;
     const pathname = window.location.pathname;
+
+    if (!pathname.startsWith(base)) return 0;
+
     const route = pathname.slice(base.length);
     const match = route.match(/^(\d+)\/?$/);
-    const value = match ? Number(match[1]) : 0;
+
+    if (!match) return 0;
+
+    const value = Number(match[1]);
 
     return Math.min(100, Math.max(0, value));
   }
